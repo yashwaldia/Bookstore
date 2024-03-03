@@ -1,0 +1,93 @@
+/* Styles for the contacts section */
+.contacts-section {
+  width: 100%; /* Take up 100% of the viewport width */
+  background-color: aliceblue;
+}
+
+/* Styles for the slider container */
+.slider-container {
+  padding: 30px;
+  margin: 30px ;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  overflow: visible;
+}
+
+/* Styles for individual slides */
+.slick-slide {
+  padding: 0 5px;
+}
+
+/* Styles for individual cards */
+.card {
+  height: 65vh;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+/* Styles for card info */
+.card-info {
+  display: flex;
+  height: 100%;
+}
+
+/* Hover effect for cards */
+.card:hover {
+  
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+/* Styles for the slider */
+.slick-slider {
+  position: relative;
+}
+
+/* Styles for slider arrows
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 24px;
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+/* Styles for slider dots */
+/* .slick-dots {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Styles for individual dots */
+/* .slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+} */
+
+/* Styles for active dot */
+/* .slick-dots li.slick-active button {
+  background-color: #007bff;
+}   */
+.heading {
+  padding: 30px 30px 0px 30px;
+  font-family: Perpetua, serif;
+}
+
