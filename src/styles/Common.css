@@ -1,7 +1,8 @@
 /* Styles for the contacts section */
-.contacts-section {
+.section {
   width: 100%; /* Take up 100% of the viewport width */
   background-color: aliceblue;
+  
 }
 
 /* Styles for the slider container */

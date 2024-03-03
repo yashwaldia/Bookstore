@@ -7,6 +7,27 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "grey" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "grey" }}
+      onClick={onClick}
+    />
+  );
+}
 const Comedy = () => {
   const [books, setBooks] = useState([]);
   const [selectedBook, setSelectedBook] = useState(null);
@@ -32,6 +53,8 @@ const Comedy = () => {
     centerPadding: "30px",
     slidesToShow: 6, // Display 4 cards at a time
     swipeToSlide: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     afterChange: function (index) {
       console.log(
         `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
@@ -48,7 +71,7 @@ const Comedy = () => {
   };
 
   return (
-    <section className="contacts-section">
+    <section className="section">
       <h1 className="heading">Comedy</h1>
       <div className="slider-container">
         <Slider {...settings}>
