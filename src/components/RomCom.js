@@ -12,7 +12,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "grey" }}
+      style={{ ...style, display: "block", background: "#C3ACD0" }}
       onClick={onClick}
     />
   );
@@ -23,7 +23,7 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "grey" }}
+      style={{ ...style, display: "block", background: "#C3ACD0" }}
       onClick={onClick}
     />
   );
@@ -36,7 +36,7 @@ const RomCom = () => {
     const fetchBooks = async () => {
       try {
         const response = await axios.get(
-          "https://www.googleapis.com/books/v1/volumes?q=romcom"
+          `https://www.googleapis.com/books/v1/volumes?q=romcom&key=AIzaSyApzOnC5h1dFvNvOVcGblNDZ3vXbmUWbJc`
         );
         setBooks(response.data.items);
       } catch (error) {
@@ -126,6 +126,13 @@ const RomCom = () => {
               ? selectedBook?.volumeInfo.authors.join(", ")
               : "Unknown"}
           </p>
+
+          <p>
+            <strong>Publish Date:</strong>{" "}
+            {selectedBook?.volumeInfo.publishedDate
+              ? selectedBook?.volumeInfo.publishedDate
+              : "Unknown"}
+          </p>
           <p>{selectedBook?.volumeInfo.description}</p>
         </Modal.Body>
         <Modal.Footer>
@@ -134,6 +141,7 @@ const RomCom = () => {
           </Button>
           <Button
             variant="primary"
+            className='read'
             href={selectedBook?.volumeInfo.infoLink}
             target="_blank"
             rel="noopener noreferrer"

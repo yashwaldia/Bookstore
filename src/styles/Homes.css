@@ -4,7 +4,7 @@
   width: 100%; /* Take up 100% of the viewport width */
   margin-top: 60px;
   justify-content: center; /* Center-align content horizontally */
-  text-align: center; /* Center-align content within each div */
+  text-align: center;
 }
 img {
   max-width: 100%; /* Set maximum width to 100% of the parent container's width */
@@ -21,15 +21,15 @@ img {
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: black; /* Change the background color of the arrow icons */
+  background-color: #92C7CF; /* Change the background color of the arrow icons */
 }
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-  color: grey; /* Change the color of the arrows on hover */
+  color: #92C7CF; /* Change the color of the arrows on hover */
 }
 
 .carousel-control-prev-icon:hover,
 .carousel-control-next-icon:hover {
-  background-color: grey; /* Change the background color of the arrow icons on hover */
+  background-color: #92C7CF; /* Change the background color of the arrow icons on hover */
 }
